@@ -1,0 +1,12 @@
+{% load static %}
+{% if user.is_authenticated %}
+<center> <h2>{% block title %} Profile Information {% endblock %}</h2> 
+
+   
+<p> Username: <textarea name="Username" id="Username" cols="30" rows="1"> {{ user }} </textarea></p>
+<p> Email: <textarea name="Username" id="Username" cols="35" rows="1"> {{user.email }} </textarea></p>
+{% else %}
+
+    <p>login to view your profile or create your profile $ other wise you can't see your profile</p>
+{% endif %}
+</center>

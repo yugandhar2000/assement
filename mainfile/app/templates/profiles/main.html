@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>main</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body style="background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));">
+        
+        {% include 'profiles/navbar.html' %}
+        <center><h1>welcome</h1>
+            <p>signin to your account (or) create new account </p>
+        
+        {% block content %}
+        
+        
+        
+        
+        {% endblock %}
+
+        <hr>
+        Copyright &copy; 2021 </p>
+        </center>
+    </body>
+
+</html>

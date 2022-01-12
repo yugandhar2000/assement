@@ -1,0 +1,128 @@
+{% load static%}
+<style>
+  table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  .hello-msg{
+		font-size: 18px;
+		color:rgb(211, 78, 16);
+		margin-right: 20px;
+	}
+
+</style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'myself' %}">Home <span class="sr-only">( {{request.user}} )</span></a>
+        </li>
+      <!--    <li class="nav-item active">
+          <a class="nav-link" href="{% url 'account' %}">settings</a>
+        </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="{% url 'taskscreate' %}">create profile</a>
+        </li> -->
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'myself' %}">BACK</a>
+        </li> 
+      </ul>
+    </div>
+    <span><a href="{% url 'logout' %}">LOGOUT</a></span>
+  </nav>
+</head>
+<body style="background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));">
+<center><table>
+    <tr>
+      <th>{% for result in diplayusername %}</th>
+    </tr>
+    <tr>
+      <td><option>{{result.username}}</option></td>
+      <td>:</td>
+      <td><option>{{result.email}}</option></td>
+    </tr>
+    {% endfor %}
+</table>
+<span><a class="hello-msg" href="{% url 'myself' %}">CLICK TO BACK HOMEPAGE</a></span>
+</center>
+</body>
+
+<footer class="py-3 bg-grey">
+  <p class="m-0 text-dark text-center ">Copyright &copy; 2021 </p>
+</footer>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+    </style>
+    
+</head>
+<body style="background-color:rgb(132, 212, 172);">
+<table>
+    <tr>
+      <th>{% for result in diplayusername %}</th>
+    </tr>
+    <tr>
+      <td><option>{{result.username}}</option></td>
+      <td><option>{{result.email}}</option></td>
+      
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'myself' %}">click to go back</a>
+<span><a href="{% url 'logout' %}">LOGOUT</a></span>
+</body>
+</html>
+
+
+
+
+
+<!--<center>
+    <select>
+        <option>-- Users Names --</option>
+        {% for result in diplayusername %}
+        <option title="{{result.username}}">{{result.username}}</option>
+        {% endfor %}
+    </select>
+      
+</center>
+<a href="{% url 'myself' %}">click to go back</a>-->

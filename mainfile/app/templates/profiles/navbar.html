@@ -1,0 +1,17 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="{% url 'home' %}">HOME</a>
+        <a class="nav-item nav-link" href="{% url 'login' %}">LOGIN</a>
+        <a class="nav-item nav-link" href="{% url 'register' %}">REGISTER</a>
+      </div>
+    </div>
+    <h4>MY PROJECT</h4>
+    <span><a class="hello-msg" href="{% url 'logout' %}">LOGOUT</a></span>
+</nav>
